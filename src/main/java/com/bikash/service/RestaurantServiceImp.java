@@ -119,6 +119,7 @@ public class RestaurantServiceImp implements RestaurantService {
 
     @Override
     public Restaurant updateRestaurantStatus(Long id) throws Exception {
+
         return null;
     }
 }
