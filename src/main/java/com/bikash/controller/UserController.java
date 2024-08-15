@@ -2,7 +2,6 @@ package com.bikash.controller;
 
 import com.bikash.model.User;
 import com.bikash.service.UserService;
-import com.bikash.service.UserServiceImp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +26,6 @@ public class UserController {
 
     @GetMapping("/profile")
     public ResponseEntity<User> findUserByJwtToken(@RequestHeader("Authorization") String jwt) throws Exception {
-
-        logger.info("Received request to /api/users/profile with JWT: {}", jwt);
 
         User user = userService.findUserByJwtToken(jwt);
 

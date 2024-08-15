@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import javax.crypto.SecretKey;
 import java.util.*;
 
+
 @Service
 public class JwtProvider {
     private SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
@@ -49,6 +50,7 @@ public class JwtProvider {
         for (GrantedAuthority authority : authorities) {
             auths.add(authority.getAuthority());
         }
+
 
         return String.join("," , auths);
     }

@@ -1,5 +1,6 @@
 package com.bikash.service;
 
+import com.bikash.Dto.RestaurantDto;
 import com.bikash.model.Restaurant;
 import com.bikash.model.User;
 import com.bikash.request.CreateRestaurantRequest;
@@ -24,7 +25,7 @@ public interface RestaurantService {
 
     public Restaurant getRestaurantByUserId(Long userId) throws Exception;
 
-    public Restaurant addToFavorites(Long restaurantId, User user) throws Exception;
+    public RestaurantDto addToFavorites(Long restaurantId, User user) throws Exception;
 
     public Restaurant updateRestaurantStatus(Long id) throws Exception;
 
